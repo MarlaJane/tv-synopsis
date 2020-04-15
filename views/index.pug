@@ -1,0 +1,19 @@
+html
+  include partials
+body
+  h1= showdata.title
+  div.show-info
+    h2 Developed By
+    ul
+      for developer in showdata.developedBy
+        li= developer
+    h2 Starring
+    ul
+      for star in showdata.starring
+        li= star
+    h2 Seasons
+    ul
+      for seasons in showdata.seasons
+        li 
+          a(href=`/seasons/${seasons.number}`) Seasons #{seasons.number}
+        
